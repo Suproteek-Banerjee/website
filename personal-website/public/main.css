@@ -214,10 +214,10 @@ body {
 }
 
 .profile-photo-shell {
-  background: linear-gradient(135deg,#faf8f1 70%,#ece9df 100%);
-  border-radius: 12px;
+  background: transparent;
+  border-radius: 0;
   box-shadow: 0 3px 24px rgba(202,191,154,0.15);
-  padding: 6px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -230,7 +230,7 @@ body {
   .profile-photo-shell {
     width: 340px;
     height: 340px;
-    border-radius: 12px;
+    border-radius: 0;
   }
 }
 
@@ -239,7 +239,7 @@ body {
   height: 100%;
   object-fit: contain;
   object-position: center center;
-  border-radius: 8px;
+  border-radius: 0;
   border: 4px solid #ede6cf;
   box-shadow: 0 0 16px rgba(219,209,167,0.1);
   transition: box-shadow 0.3s;
