@@ -58,6 +58,12 @@
             <a href="assets/Lightweight Lattice-Based Key Encapsulation for IoT Draft.pdf" target="_blank" class="read-pdf-btn">Read as PDF</a>
           </div>
         </div>
+        <form action="https://formspree.io/f/xnnozbql" method="POST" class="feedback-form glass-card" aria-label="Send feedback on this paper" onsubmit="event.preventDefault(); this.reset(); alert('Thank you for your feedback!');">
+            <label for="feedback" class="feedback-label">Feedback or Comments on this paper:</label>
+            <textarea id="feedback" name="feedback" placeholder="Your feedback on the paper..." required aria-required="true"></textarea>
+            <input name="email" type="email" placeholder="Your email (optional)" autocomplete="email">
+            <button type="submit" class="read-pdf-btn">Send Feedback</button>
+        </form>
       </div>
     </section>
 
