@@ -105,12 +105,12 @@ body {
   border-radius: 3px;
   transition: transform 0.3s;
 }
-.hamburger::before { top: -10px; }
-.hamburger::after { top: 10px; }
+.hamburger::before { top: 0; transform: translateY(-8px); transform-origin: center; }
+.hamburger::after { top: 0; transform: translateY(8px); transform-origin: center; }
 
 .nav-toggle[aria-expanded="true"] .hamburger { background: transparent; }
-.nav-toggle[aria-expanded="true"] .hamburger::before { transform: rotate(45deg) translate(7px, 7px); }
-.nav-toggle[aria-expanded="true"] .hamburger::after { transform: rotate(-45deg) translate(7px, -7px); }
+.nav-toggle[aria-expanded="true"] .hamburger::before { transform: rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .hamburger::after { transform: rotate(-45deg); }
 
 /* Navigation Links */
 .nav-links {

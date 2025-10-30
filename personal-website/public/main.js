@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
     if(navElm) navElm.classList.add('active');
     if(navLinks) navLinks.classList.remove('open');
+    if(navToggle) navToggle.setAttribute('aria-expanded','false');
     announceSection(id);
     handleAnimationsInit();
   }
@@ -81,6 +82,24 @@ document.addEventListener('DOMContentLoaded', function() {
       navToggle.setAttribute('aria-expanded','false');
     }
   })
+
+  // Close menu on outside click (mobile)
+  document.addEventListener('click', function(e) {
+    if(!navLinks || !navToggle) return;
+    const withinNav = e.target.closest('.main-nav');
+    if(!withinNav && navLinks.classList.contains('open')) {
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded','false');
+    }
+  }, { passive: true });
+
+  // Reset state on resize to desktop
+  window.addEventListener('resize', function(){
+    if(window.innerWidth >= 769 && navLinks && navToggle){
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded','false');
+    }
+  }, { passive: true });
 
   // Fade on scroll
   function handleAnimationsInit() {
